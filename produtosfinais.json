@@ -924,7 +924,8 @@
   "price": 4669,
   "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_690768-MLB80357429781_102024-F.webp",
   "permalink": "https://bazzovariedades.mercadoshops.com.br/MLB-3778634358-kit-maquina-solda-mig-flex-160-bv-boxer-cilindro-tocha-masc-_JM#position%3D45%26search_layout%3Dgrid%26type%3Ditem%26tracking_id%3Da7973ad3-538e-429c-80e5-ebcf22dacaaf",
-  "category": "Ferramentas"
+  "category": "Ferramentas",
+  "destaque": true
 },
 {
   "title": "Jogo De Lâminas Para Estilete 18mm Com 10 Peças Sparta",
@@ -987,7 +988,8 @@
   "price": 4199,
   "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_638981-MLB80357414667_102024-F.webp",
   "permalink": "https://bazzovariedades.mercadoshops.com.br/MLB-2084247759-maquina-solda-inversora-mig-250-bv-completa-cilindro-mascara-_JM#position%3D6%26search_layout%3Dgrid%26type%3Ditem%26tracking_id%3Dafd788a8-acf3-459d-a57c-a5f6905eb238",
-  "category": "Ferramentas"
+  "category": "Ferramentas",
+  "destaque": true
 },
 {
   "title": "Serrote P/ Gesso Drywall 180mm 7 Polegadas Dupla Injeção Mtx",
@@ -1639,6 +1641,22 @@
   "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_663022-MLB77086999978_062024-F.webp",
   "permalink": "https://bazzovariedades.mercadoshops.com.br/MLB-3168462716-arame-mig-p-uso-com-gas-maquina-solda-inversora-08mm-1kg-_JM#position%3D48%26search_layout%3Dgrid%26type%3Ditem%26tracking_id%3D45ba20b9-3454-4388-8911-329ee2f32863",
   "category": "Ferramentas"
+},
+{
+  "title": "Maquina Solda Inversora Mig 160 Power Tig Mma Cilindro Arame",
+  "price": 3199,
+  "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_897085-MLB71329390319_082023-F.webp",
+  "permalink": "https://bazzovariedades.mercadoshops.com.br/MLB-3938271206-maquina-solda-inversora-mig-160-power-tig-mma-cilindro-arame-_JM",
+  "category": "Ferramentas",
+  "destaque": true
+},
+{
+  "title": "Kit Maquina Solda Mig Flex 160 Bv Boxer Cilindro Tocha Masc",
+  "price": 5179,
+  "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_797988-MLB80102067164_102024-F.webp",
+  "permalink": "https://bazzovariedades.mercadoshops.com.br/MLB-3472058538-kit-maquina-solda-mig-flex-160-bv-boxer-cilindro-tocha-masc-_JM",
+  "category": "Ferramentas",
+  "destaque": true
 }
 ]
 
