@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
             let condicaoBusca = true;
             let condicaoCategoria = true;
 
-            // Filtro de preço
             if (filtrosAtuais.price) {
                 if (filtrosAtuais.price === '3500-INF') {
                     condicaoPreco = produto.price >= 3500;
@@ -40,13 +39,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
 
-            // Filtro de busca por palavra-chave
             if (filtrosAtuais.query) {
                 const query = filtrosAtuais.query.toLowerCase();
                 condicaoBusca = produto.title.toLowerCase().includes(query);
             }
 
-            // Filtro de categoria
             if (filtrosAtuais.categories && filtrosAtuais.categories.length > 0) {
                 condicaoCategoria = filtrosAtuais.categories.some(cat => produto.category && produto.category.includes(cat));
             }
@@ -59,9 +56,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const produtosFiltrados = aplicarFiltros(todosProdutos);
         totalPages = Math.ceil(produtosFiltrados.length / produtosPorPagina);
 
-        // Embaralha a lista de produtos
-        const produtosEmbaralhados = produtosFiltrados.sort(() => 0.5 - Math.random());
-        const produtosPagina = produtosEmbaralhados.slice((page - 1) * produtosPorPagina, page * produtosPorPagina);
+        // Ordena os produtos: primeiro os com destaque, depois os restantes embaralhados
+        const produtosComDestaque = produtosFiltrados.filter(produto => produto.destaque === true);
+        const produtosSemDestaque = produtosFiltrados.filter(produto => !produto.destaque).sort(() => 0.5 - Math.random());
+
+        // Combina produtos com destaque no topo e os produtos restantes aleatórios abaixo
+        const produtosOrdenados = [...produtosComDestaque, ...produtosSemDestaque];
+        const produtosPagina = produtosOrdenados.slice((page - 1) * produtosPorPagina, page * produtosPorPagina);
 
         if (produtosPagina.length > 0) {
             exibirProdutos(produtosPagina);
@@ -121,7 +122,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Aplicação de filtros
     if (applyFiltersButton) {
         applyFiltersButton.addEventListener('click', function() {
             const selectedPrice = document.querySelector('input[name="price"]:checked');
@@ -136,7 +136,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Remoção de filtros
     if (removeFiltersButton) {
         removeFiltersButton.addEventListener('click', function() {
             filtrosAtuais = {};
@@ -147,7 +146,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Filtro de busca por palavra-chave
     if (searchForm) {
         searchForm.addEventListener('submit', function(event) {
             event.preventDefault();
