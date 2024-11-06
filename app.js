@@ -58,7 +58,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function atualizarProdutos(page) {
         const produtosFiltrados = aplicarFiltros(todosProdutos);
         totalPages = Math.ceil(produtosFiltrados.length / produtosPorPagina);
-        const produtosPagina = produtosFiltrados.slice((page - 1) * produtosPorPagina, page * produtosPorPagina);
+
+        // Embaralha a lista de produtos
+        const produtosEmbaralhados = produtosFiltrados.sort(() => 0.5 - Math.random());
+        const produtosPagina = produtosEmbaralhados.slice((page - 1) * produtosPorPagina, page * produtosPorPagina);
 
         if (produtosPagina.length > 0) {
             exibirProdutos(produtosPagina);
